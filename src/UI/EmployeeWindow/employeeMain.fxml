@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import javafx.scene.AmbientLight?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../resources/CSS/dark-theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.EmployeeWindow.EmployeeMainController">
+   <children>
+      <AnchorPane fx:id="anchor" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Label fx:id="timeLabel" alignment="CENTER" layoutX="137.0" layoutY="40.0" prefHeight="99.0" prefWidth="327.0" stylesheets="@../../resources/CSS/dark-theme.css" text="Label" textFill="#ffff07">
+               <font>
+                  <Font name="Courier New" size="64.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelDate" alignment="CENTER" contentDisplay="CENTER" layoutX="203.0" layoutY="123.0" prefHeight="31.0" prefWidth="195.0" text="Label" textFill="#f5e895">
+               <font>
+                  <Font name="Javanese Text" size="17.0" />
+               </font>
+            </Label>
+            <AmbientLight color="CHARTREUSE" lightOn="true" />
+            <JFXButton alignment="CENTER" contentDisplay="TOP" layoutX="28.0" layoutY="185.0" onAction="#checkInAction" prefHeight="182.0" prefWidth="249.0" text="CHECK IN">
+               <graphic>
+                  <ImageView fitHeight="92.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../databasehandling/ProfilePictures/croupier.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="CENTER" contentDisplay="TOP" layoutX="319.0" layoutY="185.0" onAction="#checkOutAction" prefHeight="182.0" prefWidth="249.0" text="CHECK OUT">
+               <graphic>
+                  <ImageView fitHeight="103.0" fitWidth="101.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../databasehandling/ProfilePictures/femalecroupier-1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <MenuBar layoutX="-6.0" prefHeight="30.0" prefWidth="606.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <JFXHamburger fx:id="hamburger" layoutX="541.0" layoutY="30.0" prefHeight="30.0" prefWidth="37.0" styleClass="jfx-hamburger-icon" />
+            <VBox layoutX="1.0" layoutY="276.0" prefHeight="122.0" prefWidth="600.0">
+               <children>
+                  <JFXDrawer fx:id="drawer" direction="BOTTOM" prefHeight="122.0" prefWidth="950.0" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

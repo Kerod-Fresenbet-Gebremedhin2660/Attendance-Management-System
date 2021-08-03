@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+
+<StackPane fx:id="stack1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="325.0" prefWidth="801.0" stylesheets="@../../resources/CSS/dark-theme%202.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.LeaveManager.LeavemanagerController">
+   <children>
+      <AnchorPane fx:id="anchor1" prefHeight="325.0" prefWidth="766.0" styleClass="table-view">
+         <children>
+            <TableView fx:id="tableView"  prefHeight="325.0" prefWidth="555.0" stylesheets="@../../resources/CSS/dark-theme.css">
+              <columns>
+                <TableColumn fx:id="namecol" prefWidth="147.0" text="Name" />
+                <TableColumn fx:id="idcol" prefWidth="127.0" text="ID" />
+                  <TableColumn fx:id="dayscol" prefWidth="127.0" text="Days Requested" />
+                  <TableColumn fx:id="reasoncol" prefWidth="153.0" text="Reason" />
+              </columns>
+               <contextMenu>
+                  <ContextMenu>
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#handleRefresh" text="Refresh" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu>
+            </TableView>
+            <JFXTextField fx:id="id" labelFloat="true" layoutX="585.0" layoutY="49.0" promptText="ID" />
+            <JFXButton layoutX="585.0" layoutY="105.0" onAction="#approveAction" text="APPROVE" />
+            <JFXButton layoutX="585.0" layoutY="163.0" onAction="#denyAction" prefHeight="39.0" prefWidth="92.0" text="DENY" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

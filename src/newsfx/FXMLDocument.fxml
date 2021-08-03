@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.media.MediaView?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="533.0" prefWidth="877.0" stylesheets="@../resources/CSS/dark-theme%202.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="newsfx.FXMLDocumentController">
+   <children>
+      <JFXTabPane layoutX="-5.0" prefHeight="533.0" prefWidth="788.0">
+         <tabs>
+            <Tab text="      NEWS &amp; NOTICES      ">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="499.0" fitWidth="798.0" layoutX="-15.0" layoutY="-1.0">
+                           <image>
+                              <Image url="@Best%20HQ%20Wallpapers%20Downloadha%20(146).jpg" />
+                           </image>
+                        </ImageView>
+                        <JFXTextField fx:id="newsText" layoutX="25.0" layoutY="12.0" opacity="0.53" prefHeight="470.0" prefWidth="736.0" styleClass="custom-pane" stylesheets="@../resources/CSS/dark-theme%202.css" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="          VIDEOS         ">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="684.0">
+                     <children>
+                        <BorderPane layoutX="315.0" layoutY="148.0" prefHeight="452.0" prefWidth="781.0" AnchorPane.bottomAnchor="49.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <center>
+                              <MediaView fx:id="mv" fitHeight="200.0" fitWidth="200.0" BorderPane.alignment="CENTER" />
+                           </center>
+                        </BorderPane>
+                        <JFXButton layoutX="246.0" layoutY="445.0" onAction="#playAction" prefHeight="50.0" prefWidth="75.0" text=".">
+                           <graphic>
+                              <ImageView fitHeight="31.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Utilities/icons/PNG@1_white_icons/play%20%5B%23990%5D.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton layoutX="473.0" layoutY="446.0" onAction="#reloadAction" prefHeight="48.0" prefWidth="71.0" text=".">
+                           <graphic>
+                              <ImageView fitHeight="38.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Utilities/icons/PNG@1_white_icons/arrow_repeat%20%5B%23237%5D.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton layoutX="345.0" layoutY="444.0" onAction="#pauseAction" prefHeight="51.0" prefWidth="110.0" text=".">
+                           <graphic>
+                              <ImageView fitHeight="45.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Utilities/icons/PNG@1_white_icons/pause%20%5B%231009%5D.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+      <Pane layoutX="782.0" prefHeight="533.0" prefWidth="89.0">
+         <children>
+            <JFXButton fx:id="login" layoutX="16.0" layoutY="14.0" onAction="#loginAction" text="LOGIN" />
+            <JFXButton fx:id="AboutUs" layoutX="16.0" layoutY="488.0" onAction="#aboutUsAction" text="ABOUT" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

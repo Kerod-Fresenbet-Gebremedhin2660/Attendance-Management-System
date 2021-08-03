@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="371.0" prefWidth="600.0" stylesheets="@../../resources/CSS/dark-theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Chat.Server.ServerController">
+   <children>
+      <JFXButton fx:id="start" layoutX="14.0" layoutY="252.0" onAction="#startAction" text="START" />
+      <Button fx:id="end" layoutX="14.0" layoutY="318.0" mnemonicParsing="false" onAction="#endAction" text="END" />
+      <Button fx:id="online" layoutX="455.0" layoutY="252.0" mnemonicParsing="false" onAction="#onlineAction" text="ONLINE USERS" />
+      <Button fx:id="clear" layoutX="513.0" layoutY="318.0" mnemonicParsing="false" onAction="#clearAction" text="CLEAR" />
+      <Label layoutX="186.0" layoutY="327.0" prefHeight="21.0" prefWidth="228.0" text="Attendance Manegement System" textFill="WHITE" />
+      <JFXTextArea fx:id="ta_chat" editable="false" layoutX="10.0" layoutY="14.0" styleClass="text-field" stylesheets="@../../resources/CSS/dark-theme.css" />
+   </children>
+</AnchorPane>

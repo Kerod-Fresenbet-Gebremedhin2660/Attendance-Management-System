@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="766.0" prefWidth="691.0" stylesheets="@../../resources/CSS/dark-theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.UserProfile.UserprofileController">
+   <children>
+      <Label layoutX="237.0" layoutY="56.0" prefHeight="41.0" prefWidth="145.0" text="Name" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="237.0" layoutY="97.0" prefHeight="41.0" prefWidth="145.0" text="ID" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="237.0" layoutY="138.0" prefHeight="41.0" prefWidth="145.0" text="Mobile Number" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label layoutX="237.0" layoutY="179.0" prefHeight="41.0" prefWidth="145.0" text="E-Mail" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Pane layoutY="277.0" prefHeight="489.0" prefWidth="691.0" stylesheets="@../../resources/CSS/dark-theme.css">
+         <children>
+            <JFXTabPane layoutY="24.0" prefHeight="465.0" prefWidth="691.0">
+               <tabs>
+                  <Tab text="                 DAILY             ">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="tableview1" prefHeight="294.0" prefWidth="691.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                  <TableColumn fx:id="nameCol" prefWidth="190.0" text="DATE" />
+                                    <TableColumn fx:id="idCol" prefWidth="190.0" text="PUNCHIN" />
+                                    <TableColumn fx:id="dateCol" prefWidth="190.0" text="PUNCHOUT" />
+                                    <TableColumn fx:id="validCol" prefWidth="119.0" text="PRESENT" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="          MONTHLY          ">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="tableview2" layoutX="46.0" layoutY="21.0" prefHeight="294.0" prefWidth="691.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columns>
+                                  <TableColumn prefWidth="119.0" text="MONTH" />
+                                    <TableColumn prefWidth="141.0" text="DAYS PRESENT" />
+                                    <TableColumn prefWidth="141.0" text="DAYS LATE" />
+                                    <TableColumn prefWidth="141.0" text="DAYS ABSENT" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="          CHART          ">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ScrollPane prefHeight="434.0" prefWidth="691.0">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="435.0" prefWidth="690.0">
+                                       <children>
+                                          <Pane fx:id="paneView" layoutY="-5.0" prefHeight="375.0" prefWidth="1181.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="-175.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-491.0" AnchorPane.topAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </ScrollPane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+               </tabs>
+            </JFXTabPane>
+         </children>
+      </Pane>
+      <JFXButton fx:id="edit" layoutX="309.0" layoutY="229.0" onAction="#handleEditAction" prefHeight="39.0" prefWidth="74.0" text="Refresh" />
+      <JFXButton fx:id="back" layoutX="427.0" layoutY="229.0" onAction="#handleBackAction" prefHeight="39.0" prefWidth="74.0" text="Back" />
+      <Label fx:id="name" layoutX="401.0" layoutY="56.0" prefHeight="41.0" prefWidth="260.0" textFill="#ecf191">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label fx:id="id" layoutX="401.0" layoutY="97.0" prefHeight="41.0" prefWidth="260.0" textFill="#ecf191">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label fx:id="email" layoutX="401.0" layoutY="179.0" prefHeight="41.0" prefWidth="260.0" textFill="#ecf191">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label fx:id="mobile" layoutX="401.0" layoutY="138.0" prefHeight="41.0" prefWidth="260.0" textFill="#ecf191">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label fx:id="propic" layoutX="25.0" layoutY="31.0" prefHeight="237.0" prefWidth="189.0" style="-fx-background-color: grey;" textFill="#6b6969">
+         <graphic>
+            <ImageView fx:id="imageicon" fitHeight="232.0" fitWidth="199.0" pickOnBounds="true" preserveRatio="true" />
+         </graphic>
+      </Label>
+   </children>
+</AnchorPane>

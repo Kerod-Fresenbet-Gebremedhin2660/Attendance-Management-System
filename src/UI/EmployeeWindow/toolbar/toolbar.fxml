@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="117.0" prefWidth="555.0" styleClass="toolbar-container" stylesheets="@../../../../../resources/dark-theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.EmployeeWindow.toolbar.ToolbarController">
+   <children>
+      <HBox prefHeight="117.0" prefWidth="551.0">
+         <children>
+            <JFXButton contentDisplay="TOP" mnemonicParsing="false" onAction="#profileAction" prefHeight="400.0" prefWidth="160.0" styleClass="toolbar-button" text="PROFILE" textAlignment="CENTER">
+               <graphic>
+                  <FontAwesomeIconView glyphName="USER" size="25" />
+               </graphic>
+            </JFXButton>
+            <JFXButton contentDisplay="TOP" mnemonicParsing="false" onAction="#requestAction" prefHeight="400.0" prefWidth="160.0" styleClass="toolbar-button" text="REQUEST LEAVE" textAlignment="CENTER">
+               <graphic>
+                  <FontAwesomeIconView glyphName="BOOK" size="25" />
+               </graphic>
+            </JFXButton>
+            <JFXButton contentDisplay="TOP" mnemonicParsing="false" onAction="#messageAction" prefHeight="400.0" prefWidth="160.0" styleClass="toolbar-button" text="MESSAGES" textAlignment="CENTER">
+               <graphic>
+                  <FontAwesomeIconView glyphName="TABLE" size="25" />
+               </graphic>
+            </JFXButton>
+            <JFXButton contentDisplay="TOP" mnemonicParsing="false" onAction="#settingAction" prefHeight="400.0" prefWidth="160.0" styleClass="toolbar-button" text="SETTINGS" textAlignment="CENTER">
+               <graphic>
+                  <FontAwesomeIconView glyphName="COG" size="25" />
+               </graphic>
+            </JFXButton>
+            <JFXButton contentDisplay="TOP" mnemonicParsing="false" onAction="#loginAction" prefHeight="400.0" prefWidth="160.0" styleClass="toolbar-button" text="LOG OUT" textAlignment="CENTER">
+               <graphic>
+                  <FontAwesomeIconView glyphName="CHECK" size="25" textAlignment="CENTER" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </HBox>
+   </children>
+</VBox>

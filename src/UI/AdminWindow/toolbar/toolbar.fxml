@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="445.0" prefWidth="154.0" styleClass="toolbar-container" stylesheets="@../../../../../resources/dark-theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.AdminWindow.toolbar.ToolbarController">
+   <children>
+      <JFXButton contentDisplay="TOP" mnemonicParsing="false" onAction="#employee" prefHeight="400.0" prefWidth="160.0" styleClass="toolbar-button" text="ADD EMPLOYEE" textAlignment="CENTER">
+         <graphic>
+            <FontAwesomeIconView glyphName="USER" size="25" />
+         </graphic>
+      </JFXButton>
+      <JFXButton contentDisplay="TOP" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#viewemployee" prefHeight="400.0" prefWidth="160.0" styleClass="toolbar-button" text="VIEW EMPLOYEES" textAlignment="CENTER">
+         <graphic>
+            <FontAwesomeIconView glyphName="BOOK" size="25" />
+         </graphic>
+      </JFXButton>
+      <JFXButton contentDisplay="TOP" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#leavemanager" prefHeight="400.0" prefWidth="160.0" styleClass="toolbar-button" text="LEAVE MANAGER" textAlignment="CENTER">
+         <graphic>
+            <FontAwesomeIconView glyphName="TABLE" size="25" />
+         </graphic>
+      </JFXButton>
+      <JFXButton contentDisplay="TOP" mnemonicParsing="false" onAction="#checkmessages" prefHeight="400.0" prefWidth="160.0" styleClass="toolbar-button" text="CHECK MESSAGES" textAlignment="CENTER">
+         <graphic>
+            <FontAwesomeIconView glyphName="CHECK" size="25" textAlignment="CENTER" />
+         </graphic>
+      </JFXButton>
+      <JFXButton contentDisplay="TOP" layoutX="10.0" layoutY="223.0" mnemonicParsing="false" onAction="#settings" prefHeight="400.0" prefWidth="160.0" styleClass="toolbar-button" text="SETTINGS" textAlignment="CENTER">
+         <graphic>
+            <FontAwesomeIconView glyphName="COG" size="25" />
+         </graphic>
+      </JFXButton>
+      <JFXButton contentDisplay="TOP" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#signout" prefHeight="400.0" prefWidth="160.0" styleClass="toolbar-button" text="SIGN OUT" textAlignment="CENTER">
+         <graphic>
+            <FontAwesomeIconView glyphName="OK" size="25" />
+         </graphic>
+      </JFXButton>
+   </children>
+</VBox>

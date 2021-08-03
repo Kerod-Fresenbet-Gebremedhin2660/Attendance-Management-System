@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+
+<StackPane fx:id="stack1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="469.0" prefWidth="352.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.EmployeeLeave.LeaveRequesterController">
+   <children>
+      <AnchorPane fx:id="anchor1" prefHeight="400.0" prefWidth="354.0">
+         <children>
+            <JFXComboBox fx:id="reason" editable="true" labelFloat="true" layoutX="27.0" layoutY="299.0" prefHeight="39.0" prefWidth="290.0" promptText="Reason" styleClass="checkbox-main" />
+            <Label layoutX="27.0" layoutY="56.0" prefHeight="21.0" prefWidth="76.0" styleClass="checkbox-main" text="On Leave :" />
+            <Label fx:id="leavelabel" layoutX="126.0" layoutY="56.0" prefHeight="21.0" prefWidth="83.0" text="---" textFill="#16da3a" />
+            <Label layoutX="27.0" layoutY="89.0" prefHeight="21.0" prefWidth="83.0" styleClass="checkbox-main" text="Remaining:" />
+            <Label layoutX="126.0" layoutY="120.0" />
+            <Label layoutX="27.0" layoutY="174.0" prefHeight="21.0" prefWidth="69.0" styleClass="checkbox-main" text="Pending :" />
+            <Label alignment="CENTER" layoutX="114.0" layoutY="241.0" prefHeight="39.0" prefWidth="116.0" styleClass="checkbox-main" text="REQUEST LEAVE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <JFXButton layoutX="85.0" layoutY="424.0" onAction="#sendAction" text="SEND" />
+            <JFXButton layoutX="193.0" layoutY="424.0" onAction="#cancelAction" text="CANCEL" />
+            <Label fx:id="penlabel" layoutX="117.0" layoutY="174.0" prefHeight="21.0" prefWidth="116.0" textFill="#16da3a" />
+            <MenuBar layoutX="2.0" prefHeight="30.0" prefWidth="352.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                        <MenuItem mnemonicParsing="false" onAction="#refreshAction" text="Refresh" />
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <Label fx:id="remlabel" layoutX="126.0" layoutY="89.0" prefHeight="21.0" prefWidth="83.0" text="---" textFill="#16da3a" />
+            <Label layoutX="27.0" layoutY="214.0" prefHeight="21.0" prefWidth="171.0" styleClass="checkbox-main" text="Days left on yearly leave:" />
+            <Label fx:id="yearlylabel" layoutX="250.0" layoutY="214.0" prefHeight="21.0" prefWidth="64.0" textFill="#22fc13" />
+            <JFXTextField fx:id="days" layoutX="26.0" layoutY="365.0" prefHeight="37.0" prefWidth="290.0" promptText=" days requested" />
+         </children>
+      </AnchorPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../resources/CSS/dark-theme%202.css" />
+      <URL value="@../../resources/CSS/dark-theme.css" />
+   </stylesheets>
+</StackPane>
